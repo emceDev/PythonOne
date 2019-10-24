@@ -1,4 +1,5 @@
 from tkinter import *
+from dbcommands import *
 
 root = Tk()
 root.title("okno funkcyjne")
@@ -12,8 +13,9 @@ i1 = Entry(root, width=100)
 i1.pack()
 
 def search():
-    name = i1.get()
-    print(name)
+    u_name = i1.get()
+    select(u_name)
+    print(u_name)
 
 przycisk = Button(root,text="Wykonaj",command=search)
 przycisk.pack()
@@ -51,7 +53,6 @@ def send():
     print(msg)
 przycisk = Button(root,text="Wykonaj",command=send)
 przycisk.pack()
-
 
 
 mainloop()
