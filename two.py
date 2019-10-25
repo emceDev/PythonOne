@@ -28,11 +28,11 @@ l2.pack()
 i2 = Entry(root, width=100)
 i2.pack()
 
-def add():
-    name = i2.get()
-    print(name)
+def addu():
+    u_name = i2.get()
+    add(u_name)
 
-przycisk = Button(root,text="Wykonaj",command=add)
+przycisk = Button(root,text="Wykonaj",command=addu)
 przycisk.pack()
 
 
@@ -47,10 +47,10 @@ i4 = Entry(root, width=78)
 i4.pack()
 
 def send():
-    name = i3.get()
-    print(name)
+    r_name = i3.get()
     msg = i4.get()
-    print(msg)
+    send_message(r_name,msg)
+    
 przycisk = Button(root,text="Wykonaj",command=send)
 przycisk.pack()
 
