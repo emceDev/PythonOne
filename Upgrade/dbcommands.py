@@ -1,12 +1,11 @@
 import psycopg2
 from logged import *
+
 connection = psycopg2.connect(user = "postgres",
-                                  password = "zaq",
-                                  host = "127.0.0.1",
-                                  port = "59488",
-                                  database = "First")
-
-
+                                   password = "zaq",
+                                   host = "127.0.0.1",
+                                   port = "5432",
+                                   database = "First")
 def select(u_name):
     connection
     cursor = connection.cursor()
@@ -53,7 +52,7 @@ def register(name, email, password):
        print(password)
        print(email)
        print("checking values")
-
+       
        connection
        cursor = connection.cursor()
        postgreSQL_select_Query = f"select * from users WHERE email = '{email}' "
@@ -67,5 +66,4 @@ def register(name, email, password):
               cursor.execute(postgreSQL_insert_Query)
               print("registration succesfull")
        connection.commit()
-def check(x):
-       print(x)
+       

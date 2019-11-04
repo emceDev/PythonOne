@@ -1,10 +1,13 @@
 import psycopg2
-from tkinter import *
-connection = psycopg2.connect(user = "postgres",
-                                  password = "zaq",
-                                  host = "127.0.0.1",
-                                  port = "59488",
-                                  database = "First")
+
+try:
+    connection = psycopg2.connect(user = "postgres",
+                                    password = "zaq",
+                                    host = "127.0.0.1",
+                                    port = "542",
+                                    database = "First")
+except:
+    print("dbcommnds")
 def show_message(name, password, w):
        connection
        cursor = connection.cursor()

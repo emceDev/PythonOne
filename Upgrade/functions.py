@@ -19,7 +19,7 @@ def show(option):
     r_pass_label.grid(row=5)
     r_pass_e = Entry(r_frame, show='*')
     r_pass_e.grid(row=6)
-
+    print("5")
     def pass_register_data():
         name=r_name_e.get()
         password=r_pass_e.get()
@@ -29,17 +29,18 @@ def show(option):
             print("Give the correct credentials")
         else:
             data(name, password, email)
-
+        print("6")
     def pass_logging_data():
         name=r_name_e.get()
         password=r_pass_e.get()
         data(name, password)
+        print("7")
     if option=="register":
         print(option)
         root.title("Register")
         r_button = Button(r_frame, text="register", command=pass_register_data)
         r_button.grid(row=7)
-
+        print("8")
     if option=="login":
         print(option)
         root.title("Log In")
@@ -47,5 +48,5 @@ def show(option):
         r_email_label.destroy()
         r_button = Button(r_frame, text="Login", command=pass_logging_data)
         r_button.grid(row=7)
-
+        print("9")
 
